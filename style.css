@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #444;
+}
+
+.container {
+  width: 100%;
+  height: 500px;
+  border-bottom: 5px solid green;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(blue , white);
+}
+
+.pipe {
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+  position: absolute;
+  height: 170px;
+  bottom: 0;
+}
+
+.points {
+  margin: 3rem auto;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+.jump {
+  animation: mario-animation 500ms ease-out;
+}
+
+.clouds {
+  animation: cloudsMove 15s infinite ease-out;
+  height: 150px;
+  position: relative;
+}
+
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes mario-animation {
+  0% {
+    bottom: 0;
+
+  }
+
+  30% {
+    bottom: 150px;
+  }
+
+  40% {
+    bottom: 200px;
+
+  }
+
+  60% {
+    bottom: 200px;
+
+  }
+
+  70% {
+    bottom: 150px;
+
+  }
+
+  100% {
+    bottom: 0;
+
+  }
+}
+
+@keyframes cloudsMove {
+  from {
+    left: 100%;
+  }
+
+  to {
+   left: -400px;
+  }
+}     
